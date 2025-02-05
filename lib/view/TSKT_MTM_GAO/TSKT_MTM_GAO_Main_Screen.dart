@@ -99,7 +99,6 @@ Widget scTabBarView(List<TSTK_MTM_GAO> gaoList, double height, double width) {
                 ),
                 title: Text(tstkMtmGao.model,
                     style: AppTextStyle.subtitle.copyWith(color: Colors.black)),
-                subtitle: Text(tstkMtmGao.note ?? ""),
                 onTap: () {
                   showDialog(
                       context: context,
@@ -122,7 +121,7 @@ Widget scTabBarView(List<TSTK_MTM_GAO> gaoList, double height, double width) {
                               Divider(),
                               Row(
                                 children: [
-                                  Text("Số khay: "),
+                                  Text("Số máng: "),
                                   Spacer(),
                                   Text(
                                     tstkMtmGao.trays.toString(),

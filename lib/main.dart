@@ -1,5 +1,6 @@
 import 'package:dtcapp/res/widgets/coloors.dart';
 import 'package:dtcapp/utils/routes.dart';
+import 'package:dtcapp/viewModel/ChiPhiDauTu_viewModel.dart';
 import 'package:dtcapp/viewModel/TSKT_MTM_GAO_viewModel.dart';
 import 'package:dtcapp/viewModel/ThietBiPhuTro_viewModel.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => TSTK_GaoViewModel(), lazy: true),
         ChangeNotifierProvider(
             create: (_) => ThietBiPhuTroViewModel(), lazy: true),
+        ChangeNotifierProvider(create: (_) => ChiPhiDauTuViewModel(), lazy: true),
       ],
       child: WillPopScope(
           child: MaterialApp.router(
