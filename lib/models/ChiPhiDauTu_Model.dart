@@ -5,6 +5,7 @@ class ChiPhiDauTuModel {
   final int heThongNenKhi;
   final double csTrungBinh;
   final int tongChiPhi;
+  final NangSuat nangSuat;
 
   ChiPhiDauTuModel({
     required this.ten,
@@ -12,6 +13,7 @@ class ChiPhiDauTuModel {
     required this.thietBiPhu,
     required this.heThongNenKhi,
     required this.csTrungBinh,
+    required this.nangSuat,
   }) : tongChiPhi = gia + thietBiPhu + heThongNenKhi;
 
   // Factory method to create a ProductionModel from a JSON object
@@ -22,6 +24,11 @@ class ChiPhiDauTuModel {
       thietBiPhu: json['thietBiPhu'],
       heThongNenKhi: json['heThongNenKhi'],
       csTrungBinh: json['csTrungBinh'],
+      nangSuat: NangSuat(
+        nguyen: json['nangSuat']['nguyen'],
+        thanhPham: json['nangSuat']['thanhPham'],
+        phePham: json['nangSuat']['phePham'],
+      ),
     );
   }
 
@@ -32,7 +39,19 @@ class ChiPhiDauTuModel {
       'gia': gia,
       'thietBiPhu': thietBiPhu,
       'heThongNenKhi': heThongNenKhi,
-      'csTrungBinh' : csTrungBinh
+      'csTrungBinh': csTrungBinh
     };
   }
+}
+
+class NangSuat {
+  final double nguyen;
+  final double thanhPham;
+  final double phePham;
+
+  NangSuat({
+    required this.nguyen,
+    required this.thanhPham,
+    required this.phePham,
+  });
 }

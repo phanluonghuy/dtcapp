@@ -1,5 +1,6 @@
 import 'package:dtcapp/data/CPDT_cstieuthu1h.dart';
 import 'package:dtcapp/models/ChiPhiDauTu_Model.dart';
+import 'package:dtcapp/view/ChiPhiDauTu/TinhToanChiPhi_TinhLoiNhuan1Ngay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -11,6 +12,8 @@ import '../../res/widgets/PowerConsumptionTable.dart';
 import '../../res/widgets/coloors.dart';
 import '../../viewModel/ChiPhiDauTu_viewModel.dart';
 import 'TinhToanChiPhi_GiaDien1Ngay_screen.dart';
+import 'TinhToanChiPhi_TinhDoanhThu.dart';
+import 'TinhToanChiPhi_TinhKhauHao.dart';
 
 class TinhToanChiPhi extends StatefulWidget {
   const TinhToanChiPhi({super.key});
@@ -62,9 +65,15 @@ class _TinhToanChiPhiState extends State<TinhToanChiPhi> {
                 element(context, height, 1, "Tính giá điện 1 ngày", () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhtoanchiphiGiadien1ngayScreen()));
                 }),
-                element(context, height, 2, "Tính lợi nhậu 1 ngày", () {}),
-                element(context, height, 3, "Tính khấu hao", () {}),
-                element(context, height, 4, "Tính doanh thu", () {}),
+                element(context, height, 2, "Tính lợi nhậu 1 ngày", () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhLoiNhau1Ngay()));
+                }),
+                element(context, height, 3, "Tính khấu hao", () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhKhauHao()));
+                }),
+                element(context, height, 4, "Tính doanh thu", () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhDoanhThu()));
+                }),
               ],
             )
           ])),
