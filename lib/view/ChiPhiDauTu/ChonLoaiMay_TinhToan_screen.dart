@@ -1,4 +1,5 @@
 import 'package:dtcapp/models/ChiPhiDauTu_Model.dart';
+import 'package:dtcapp/utils/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -99,75 +100,16 @@ Widget gia(height, width, context) {
           "Giá",
           style: AppTextStyle.subtitle.copyWith(color: Colors.black),
         ),
+        onTap: () {
+          showInfor(context);
+        },
         trailing: PopupMenuButton<String>(
           onSelected: (String value) {
             if (value == 'view') {
-              showDialog(
-                  context: context,
-                  builder: (context) {
-                    final viewModel =
-                        Provider.of<ChiPhiDauTuViewModel>(context);
-                    final numberFormat =
-                        NumberFormat.currency(locale: 'vi_VN', symbol: '₫');
-                    return AlertDialog(
-                      title: Text('Chi phí đầu tư'),
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Text('${viewModel.chiPhiDauTuModel?.ten}'),
-                              Spacer(),
-                              Text(numberFormat
-                                  .format(viewModel.chiPhiDauTuModel?.gia))
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Thiết bị phụ:'),
-                              Spacer(),
-                              Text(numberFormat.format(
-                                  viewModel.chiPhiDauTuModel?.thietBiPhu))
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Hệ thống nén khí:'),
-                              Spacer(),
-                              Text(numberFormat.format(
-                                  viewModel.chiPhiDauTuModel?.heThongNenKhi))
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                'Tổng:',
-                                style: AppTextStyle.caption,
-                              ),
-                              Spacer(),
-                              Text(
-                                numberFormat.format(
-                                  viewModel.chiPhiDauTuModel?.tongChiPhi,
-                                ),
-                                style: AppTextStyle.subtitle,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: Text('Đóng'),
-                        ),
-                      ],
-                    );
-                  });
+              showInfor(context);
             } else if (value == 'edit') {
               // Add your 'Edit' functionality here
+              Utils.flushBarErrorMessage("Chức năng chưa có", context);
             }
           },
           itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
@@ -249,8 +191,75 @@ Widget chiPhiVanHanh(height, width, context) {
           style: AppTextStyle.subtitle.copyWith(color: Colors.black),
         ),
         trailing: const Icon(Icons.arrow_forward_ios),
-        // onTap: () {},
+        onTap: () {
+          Utils.flushBarErrorMessage("Chức năng chưa có", context);
+        },
       )),
     ),
   );
+}
+
+void showInfor(BuildContext context) {
+  showDialog(
+      context: context,
+      builder: (context) {
+        final viewModel = Provider.of<ChiPhiDauTuViewModel>(context);
+        final numberFormat =
+            NumberFormat.currency(locale: 'vi_VN', symbol: '₫');
+        return AlertDialog(
+          title: Text('Chi phí đầu tư'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text('${viewModel.chiPhiDauTuModel?.ten}'),
+                  Spacer(),
+                  Text(numberFormat.format(viewModel.chiPhiDauTuModel?.gia))
+                ],
+              ),
+              Row(
+                children: [
+                  Text('Thiết bị phụ:'),
+                  Spacer(),
+                  Text(numberFormat
+                      .format(viewModel.chiPhiDauTuModel?.thietBiPhu))
+                ],
+              ),
+              Row(
+                children: [
+                  Text('Hệ thống nén khí:'),
+                  Spacer(),
+                  Text(numberFormat
+                      .format(viewModel.chiPhiDauTuModel?.heThongNenKhi))
+                ],
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Tổng:',
+                    style: AppTextStyle.caption,
+                  ),
+                  Spacer(),
+                  Text(
+                    numberFormat.format(
+                      viewModel.chiPhiDauTuModel?.tongChiPhi,
+                    ),
+                    style: AppTextStyle.subtitle,
+                  )
+                ],
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('Đóng'),
+            ),
+          ],
+        );
+      });
 }

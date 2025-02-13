@@ -1,7 +1,7 @@
 
   final List<List<Map<String, Object?>>> CPDT_cstieuthu1h = [ [
     {"device": "Máy tách\nmàu", "power": 8, "quantity": 1, "total": 8, "isBold": false},
-    {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": false},
+    {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": true},
     {"device": "Gàu tải", "power": 2, "quantity": 4, "total": 8},
     {"device": "Quạt hút\nbụi", "power": 7.5, "quantity": 1, "total": 7.5},
     {"device": "Hệ thống\nnén khí", "power": 75, "quantity": 1, "total": 75},
@@ -10,7 +10,7 @@
   ],
     [
       {"device": "Máy tách\nmàu", "power": 5, "quantity": 1, "total": 5, "isBold": false},
-      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": false},
+      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": true},
       {"device": "Gàu tải", "power": 1.5, "quantity": 4, "total": 6},
       {"device": "Quạt hút\nbụi", "power": 7.5, "quantity": 1, "total": 7.5},
       {"device": "Hệ thống\nnén khí", "power": 55, "quantity": 1, "total": 55},
@@ -18,7 +18,7 @@
       {"device": "Công suất\ntrung bình", "power": null, "quantity": null, "total": 58.80, "isBold": true},
     ], [
       {"device": "Máy tách\nmàu", "power": 3.5, "quantity": 1, "total": 3.5, "isBold": false},
-      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": false},
+      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": true},
       {"device": "Gàu tải", "power": 1.5, "quantity": 4, "total": 6},
       {"device": "Quạt hút\nbụi", "power": 5, "quantity": 1, "total": 5},
       {"device": "Hệ thống\nnén khí", "power": 37, "quantity": 1, "total": 37},
@@ -26,7 +26,7 @@
       {"device": "Công suất\ntrung bình", "power": null, "quantity": null, "total": 41.20, "isBold": true},
     ], [
       {"device": "Máy tách\nmàu", "power": 2.6, "quantity": 1, "total": 2.6, "isBold": false},
-      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": false},
+      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": true},
       {"device": "Gàu tải", "power": 1.5, "quantity": 4, "total": 6},
       {"device": "Quạt hút\nbụi", "power": 5, "quantity": 1, "total": 5},
       {"device": "Hệ thống\nnén khí", "power": 22, "quantity": 1, "total": 22},
@@ -34,7 +34,7 @@
       {"device": "Công suất\ntrung bình", "power": null, "quantity": null, "total": 28.48, "isBold": true},
     ], [
       {"device": "Máy tách\nmàu", "power": 2.5, "quantity": 1, "total": 2.5, "isBold": false},
-      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": false},
+      {"device": "Hệ thống\nphụ trợ", "power": null, "quantity": null, "total": null, "isBold": true},
       {"device": "Gàu tải", "power": 1, "quantity": 3, "total": 3},
       {"device": "Quạt hút\nbụi", "power": 3, "quantity": 1, "total": 3},
       {"device": "Hệ thống\nnén khí", "power": 15, "quantity": 1, "total": 15},

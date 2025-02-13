@@ -198,10 +198,27 @@ Widget _dsThietBi(height, width, ThietBiPhuTroViewModel viewModel) {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => PhotoView(
-                                  imageProvider: AssetImage(model.image),
-                                  enableRotation: true,
-                                  minScale: PhotoViewComputedScale.contained,
+                                builder: (context) => Scaffold(
+                                  appBar: AppBar(
+                                    title: Text(model.model ?? "",
+                                        style: AppTextStyle.title
+                                            .copyWith(color: Colors.white)),
+                                    backgroundColor: AppColors.primaryColor,
+                                    leading: IconButton(
+                                      icon: const Icon(
+                                        Icons.arrow_back,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () {
+                                        context.pop();
+                                      },
+                                    ),
+                                  ),
+                                  body: PhotoView(
+                                    imageProvider: AssetImage(model.image),
+                                    enableRotation: true,
+                                    minScale: PhotoViewComputedScale.contained,
+                                  ),
                                 ), // Replace with your image
                               ),
                             );

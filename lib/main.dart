@@ -37,7 +37,6 @@ class MyApp extends StatelessWidget {
                 },
               ),
             ),
-
             routerConfig: router, // Use the GoRouter instance
           ),
           onWillPop: () async {

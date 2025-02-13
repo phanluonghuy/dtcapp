@@ -65,13 +65,13 @@ class _TinhToanChiPhiState extends State<TinhToanChiPhi> {
                 element(context, height, 1, "Tính giá điện 1 ngày", () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhtoanchiphiGiadien1ngayScreen()));
                 }),
-                element(context, height, 2, "Tính lợi nhậu 1 ngày", () {
+                element(context, height, 2, "Chi phí gia công MTM", () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhLoiNhau1Ngay()));
                 }),
                 element(context, height, 3, "Tính khấu hao", () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhKhauHao()));
                 }),
-                element(context, height, 4, "Tính doanh thu", () {
+                element(context, height, 4, "Doanh thu khi tách màu", () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TinhDoanhThu()));
                 }),
               ],

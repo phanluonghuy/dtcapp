@@ -144,7 +144,7 @@ class _TinhDoanhThuState extends State<TinhDoanhThu> {
                   current: _nguyenLieuFocus, next: _thanhPhamFocus);
             },
             decoration: InputDecoration(
-              hintText: "Nhập giá tiền nguyên liệu 1 giờ",
+              hintText: "Nhập giá tiền nguyên liệu VNĐ/kg",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -160,7 +160,7 @@ class _TinhDoanhThuState extends State<TinhDoanhThu> {
                   current: _thanhPhamFocus, next: _phePhamFocus);
             },
             decoration: InputDecoration(
-              hintText: "Nhập giá tiền thành phẩm 1 giờ",
+              hintText: "Nhập giá tiền thành phẩm VNĐ/kg",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -176,7 +176,7 @@ class _TinhDoanhThuState extends State<TinhDoanhThu> {
                   current: _phePhamFocus, next: null);
             },
             decoration: InputDecoration(
-              hintText: "Nhập giá tiền phế phẩm 1 giờ",
+              hintText: "Nhập giá tiền phế phẩm VNĐ/kg",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -201,7 +201,7 @@ class _TinhDoanhThuState extends State<TinhDoanhThu> {
                       label: Text('')), // Empty column for the first column
                   DataColumn(label: Text('Năng\nsuất')),
                   DataColumn(label: Text('Giá\ntiền')),
-                  DataColumn(label: Text('Doanh thu 1 ngày')),
+                  DataColumn(label: Text('Doanh thu\n1 ngày')),
                 ],
                 rows: <DataRow>[
                   DataRow(

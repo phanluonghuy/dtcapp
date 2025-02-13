@@ -1,10 +1,12 @@
 import 'package:dtcapp/res/texts/app_text.dart';
+import 'package:dtcapp/res/widgets/buttons/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 import '../res/widgets/coloors.dart';
 import '../utils/listApp.dart';
+import 'WebViewScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,9 +23,38 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "DTC Group",
-          style: AppTextStyle.title.copyWith(color: Colors.white),
+        // title: Text(
+        //   "DTC Group",
+        //   style: AppTextStyle.title.copyWith(color: Colors.white),
+        // ),
+        // title: Container(
+        //     padding:
+        //         const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        //     decoration: BoxDecoration(
+        //       borderRadius: BorderRadius.circular(12),
+        //       color: Colors.white70,
+        //     ),
+        //     child: Image.asset('assets/icons/logo-long.png', height: 20)),
+        title: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: Colors.white70,
+          ),
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: 'DTC',
+                  style: AppTextStyle.title.copyWith(color: Color(0xFF00732F)),
+                ),
+                TextSpan(
+                  text: 'Group',
+                  style: AppTextStyle.title.copyWith(color: Color(0xFF6BC048)),
+                ),
+              ],
+            ),
+          ),
         ),
         backgroundColor: AppColors.primaryColor,
         automaticallyImplyLeading: true,
@@ -33,14 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           children: [
-            SizedBox(height: height * 0.02),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Chức năng",
-                style: AppTextStyle.subtitle,
-              ),
-            ),
             SizedBox(height: height * 0.02),
             GridView.builder(
                 shrinkWrap: true,

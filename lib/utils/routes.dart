@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart'; // Import Cupertino
 import '../view/ChiPhiDauTu/ChonLoaiMay_TinhToan_screen.dart';
 import '../view/ChiPhiDauTu/TinhToanChiPhi_screen.dart';
 import '../view/TSKT_MTM_GAO/TSKT_MTM_GAO_Main_Screen.dart';
+import '../view/WebViewScreen.dart';
 import '../view/home_screen.dart';
 
 final GoRouter router = GoRouter(
@@ -36,6 +37,13 @@ final GoRouter router = GoRouter(
             builder: (context, state) => const TinhToanChiPhi()),
       ],
     ),
+    GoRoute(
+      path: "/viewInstallationDrawings",
+      builder: (context, state) => const WebViewScreen(
+        url:
+            "https://drive.google.com/drive/folders/1pg6RhijCIMzVOcy0FLRSj-RIbaKThYGk?usp=sharing",
+      ),
+    )
   ],
   errorBuilder: (context, state) => const Scaffold(
     body: Center(

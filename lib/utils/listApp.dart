@@ -1,5 +1,5 @@
 const Map<String, Map<String, dynamic>> appFunctions = {
-  "TSKT MTM GẠO": {
+  "MÁY TÁCH MÀU": {
     "icon": "assets/icons/icons8-rice.svg",
     "description": "Technical specifications for rice milling machines.",
     "path": "/riceDetails",
@@ -13,6 +13,11 @@ const Map<String, Map<String, dynamic>> appFunctions = {
     "icon": "assets/icons/icons8-investment.svg",
     "description": "Investment cost information.",
     "path": "/investmentDetails",
+  },
+  "BẢN VẼ LẮP ĐẶT": {
+    "icon": "assets/icons/icons8-blueprint.svg",
+    "description": "View driver installation drawings.",
+    "path": "/viewInstallationDrawings",
   },
 };
 
@@ -58,7 +63,7 @@ const Map<String, List<Map<String, dynamic>>> phutroList = {
       "image": "assets/phutro/tbp2maylapdau/SC10,SF448.png",
     }
   ],
-  "TBP LẮP 2 MÁY NỐI TIẾP": [
+  "TBP LẮP 2 MÁY THẲNG HÀNG": [
     {
       "model": "SC16Pro, SC16, SF768",
       "image": "assets/phutro/tbp2maylapnoitiep/SC16Pro,SC16,SF768.png",
